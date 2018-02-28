@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FA78B64E-2477-4A48-8219-BAB4FED398B0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Task_Manager</RootNamespace>
+    <AssemblyName>Task_Manager</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>task-management.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\ClassEmpDepart.cs" />
+    <Compile Include="BL\ClassReport.cs" />
+    <Compile Include="BL\ClassSign.cs" />
+    <Compile Include="BL\ClassTasks.cs" />
+    <Compile Include="DAL\DataAccessLayer.cs" />
+    <Compile Include="PL\FRM_About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_About.Designer.cs">
+      <DependentUpon>FRM_About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_AddLinkEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_AddLinkEmp.Designer.cs">
+      <DependentUpon>FRM_AddLinkEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_AddNewDepart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_AddNewDepart.Designer.cs">
+      <DependentUpon>FRM_AddNewDepart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_AddNewEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_AddNewEmp.Designer.cs">
+      <DependentUpon>FRM_AddNewEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_AddNewTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_AddNewTask.Designer.cs">
+      <DependentUpon>FRM_AddNewTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_ChangePassword.Designer.cs">
+      <DependentUpon>FRM_ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_DeleteUpdateLinkEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_DeleteUpdateLinkEmp.Designer.cs">
+      <DependentUpon>FRM_DeleteUpdateLinkEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_DepartManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_DepartManagment.Designer.cs">
+      <DependentUpon>FRM_DepartManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_EmpManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_EmpManagment.Designer.cs">
+      <DependentUpon>FRM_EmpManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_Main.Designer.cs">
+      <DependentUpon>FRM_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_Report.Designer.cs">
+      <DependentUpon>FRM_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_SignIn.Designer.cs">
+      <DependentUpon>FRM_SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_TaskDetailsReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_TaskDetailsReports.Designer.cs">
+      <DependentUpon>FRM_TaskDetailsReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_TaskManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_TaskManager.Designer.cs">
+      <DependentUpon>FRM_TaskManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FRM_Task_Table.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FRM_Task_Table.Designer.cs">
+      <DependentUpon>FRM_Task_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PL\FRM_About.resx">
+      <DependentUpon>FRM_About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_AddLinkEmp.resx">
+      <DependentUpon>FRM_AddLinkEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_AddNewDepart.resx">
+      <DependentUpon>FRM_AddNewDepart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_AddNewEmp.resx">
+      <DependentUpon>FRM_AddNewEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_AddNewTask.resx">
+      <DependentUpon>FRM_AddNewTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_ChangePassword.resx">
+      <DependentUpon>FRM_ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_DeleteUpdateLinkEmp.resx">
+      <DependentUpon>FRM_DeleteUpdateLinkEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_DepartManagment.resx">
+      <DependentUpon>FRM_DepartManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_EmpManagment.resx">
+      <DependentUpon>FRM_EmpManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_Main.resx">
+      <DependentUpon>FRM_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_Report.resx">
+      <DependentUpon>FRM_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_SignIn.resx">
+      <DependentUpon>FRM_SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_TaskDetailsReports.resx">
+      <DependentUpon>FRM_TaskDetailsReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_TaskManager.resx">
+      <DependentUpon>FRM_TaskManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FRM_Task_Table.resx">
+      <DependentUpon>FRM_Task_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="1.ico" />
+    <Content Include="task-management.ico" />
+    <None Include="Resources\task-management-tool.jpg" />
+    <None Include="Resources\About.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
